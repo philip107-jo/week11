@@ -1,0 +1,26 @@
+version: "3.8" # docker-compose 버전 지정
+
+services:
+  web:
+    # 1. 빌드 설정:
+    # 현재 폴더(.)에 있는 'Dockerfile'을 찾아 이미지를 빌드합니다.
+    build: .
+
+    # 2. 포트 설정:
+    # 호스트(노트북/EC2)의 5000번 포트를 -> 컨테이너 내부의 5000번 포트로 연결합니다.
+    # [cite_start](Dockerfile의 CMD에서 gunicorn이 5000번 포트를 사용 [cite: 4])
+    # (README.md에서도 localhost:5000을 언급)
+    ports:
+      - "5000:5000"
+
+    # 3. 볼륨 설정 (개발 편의성):
+    # [cite_start]현재 폴더(.)를 -> 컨테이너 내부의 /app 폴더(Dockerfile의 WORKDIR [cite: 2])와 동기화합니다.
+    # 이렇게 하면, 코드를 수정할 때마다 매번 'docker compose up --build'를
+    # 할 필요 없이, .html이나 app.py를 수정하면 바로 반영됩니다.
+    # (app.py의 debug=True 모드와 연동되어 자동 재시작)
+    volumes:
+      - .:/app
+
+    # 4. 재시작 정책:
+    # 어떤 이유로든 컨테이너가 중지되면 자동으로 다시 시작합니다.
+    restart: always
