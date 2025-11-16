@@ -11,7 +11,7 @@ services:
     # [cite_start](Dockerfile의 CMD에서 gunicorn이 5000번 포트를 사용 [cite: 4])
     # (README.md에서도 localhost:5000을 언급)
     ports:
-      - "5000:5000"
+      - "80:5000"
 
     # 3. 볼륨 설정 (개발 편의성):
     # [cite_start]현재 폴더(.)를 -> 컨테이너 내부의 /app 폴더(Dockerfile의 WORKDIR [cite: 2])와 동기화합니다.
