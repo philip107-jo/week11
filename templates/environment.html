@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AI 자동 발주 - 4. 구현 환경</title>
+    <style>
+      /* (main.html과 동일한 CSS 스타일) */
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        background-color: #f4f4f4;
+      }
+      .container {
+        max-width: 800px;
+        margin: auto;
+        padding: 30px;
+        background: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      }
+      h1 {
+        color: #333;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 10px;
+      }
+      h2 {
+        color: #555;
+      }
+      p {
+        color: #666;
+      }
+      ul {
+        list-style-type: disc;
+        margin-left: 20px;
+      }
+      li {
+        margin-bottom: 10px;
+      }
+      nav {
+        margin-top: 30px;
+      }
+      nav a {
+        display: inline-block;
+        background: #6c757d;
+        color: #ffffff;
+        padding: 10px 15px;
+        border-radius: 5px;
+        text-decoration: none;
+      }
+      nav a:hover {
+        background: #5a6268;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>4. 구현 환경 (AI 프로젝트 기준)</h1>
+
+      <h2>프론트엔드</h2>
+      <ul>
+        <li>React Native</li>
+        <li>TypeScript</li>
+        <li>Expo go</li>
+        <li>Prisma (ORM)</li>
+      </ul>
+
+      <h2>백엔드 (API 서버 / 런타임 1)</h2>
+      <ul>
+        <li>Node.js (v18+)</li>
+        <li>TypeScript</li>
+        <li>Express (또는 NestJS)</li>
+        <li>Prisma (ORM)</li>
+      </ul>
+
+      <h2>AI 엔진 (뇌 / 런타임 2)</h2>
+      <ul>
+        <li>Python (v3.9+)</li>
+        <li>Prophet (시계열 예측)</li>
+        <li>Pandas (데이터 처리)</li>
+        <li>Pickle (모델 저장)</li>
+      </ul>
+
+      <h2>데이터베이스</h2>
+      <ul>
+        <li>PostgreSQL</li>
+      </ul>
+
+      <h2>API 및 클라우드</h2>
+      <ul>
+        <li>Kakao Geocoding API (주소→좌표)</li>
+        <li>Open-Meteo API (과거/미래 날씨)</li>
+        <li>배포: Rander</li>
+      </ul>
+
+      <h2>버전 관리</h2>
+      <ul>
+        <li>Git, GitHub</li>
+      </ul>
+
+      <nav>
+        <a href="/main">⬅️ 메인으로 돌아가기</a>
+      </nav>
+    </div>
+  </body>
+</html>
